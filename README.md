@@ -1,5 +1,5 @@
 # Part1 React 进阶与扫盲
-### react 设计理念介绍 https://react.docschina.org 2. 
+### react 设计理念介绍 https://react.docschina.org 
 ### 创建你的第⼀个react app 
 ```
 npm init react-app react-demo --template typescript 
