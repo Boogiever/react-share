@@ -10,26 +10,26 @@ npm init react-app react-demo --template typescript
 ```
 npm install eslint --save-dev
 ```
-● react 组件. 
-● React 路由. 
+● react 组件.     
+● React 路由.     
 
 #### 参考 
-React-Bootstrap 
-https://react-bootstrap.github.io/ 
-https://react-bootstrap.github.io/components/cards/ 
+React-Bootstrap    
+https://react-bootstrap.github.io/    
+https://react-bootstrap.github.io/components/cards/    
 
 # Part2 react进阶
 ### 知识点 
-● 搭建JSON Server，实现商品列表的动态渲染  https://github.com/typicode/json-server/ 
-● 引⼊hooks 和 context的概念  
+● 搭建JSON Server，实现商品列表的动态渲染  https://github.com/typicode/json-server/     
+● 引⼊hooks 和 context的概念      
 
 # Part3 react+mui 
 ### 内容 
-● 实战在⼊门的基础上结合Mui开发⼀个购物车组建(购物车图标+商品数) 
-● 点击某⾏商品后的“加⼊购物车”按钮，可以动态更新购物车的商品数量 
+● 实战在⼊门的基础上结合Mui开发⼀个购物车组建(购物车图标+商品数)     
+● 点击某⾏商品后的“加⼊购物车”按钮，可以动态更新购物车的商品数量    
 ### 知识点 
-● React组建
-● Mui theme 以及如何修改 Mui 组建⾃带样式 
+● React组建    
+● Mui theme 以及如何修改 Mui 组建⾃带样式     
 
 
 # Part4 react unit test 
