@@ -34,10 +34,14 @@ https://react-bootstrap.github.io/components/cards/
 
 # Part4 react unit test 
 
-# Part6 es6 新特性 
+# Part5 Redux
 
-
-# Part5 type script 
+# Part6 type script 
 (void/undefine/never/very 关键字)
+
+# Part7 es6 新特性 
+
+
+
 
 
