@@ -1,8 +1,10 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
+import {Container} from "react-bootstrap";
+import { Navba } from "./components/Navba.tsx";
 import Product from './components/Product.tsx';
 
 const App = () => {
-    let [products, setProducts] = React.useState([])
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         fetch("/products")
@@ -11,11 +13,14 @@ const App = () => {
     }, [])
 
   return (
-    <div style={{display:'flex',flexWrap: 'wrap'}}>
-        {products.map((product,index) => (
-            <Product key={index}  product={product}/>
-        ))}
-    </div>
+      <Container>
+          <Navba/>
+          <div style={{display:'flex',flexWrap: 'wrap'}}>
+              {products.map((product,index) => (
+                  <Product key={index} product={product}/>
+              ))}
+          </div>
+      </Container>
   );
 }
 
