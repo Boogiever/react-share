@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import {useNavigate} from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import {Button, TextField} from "@mui/material";
 import {PriceInput} from './style.ts';
+import {ThemeContext} from "../App.tsx";
 
 interface ComponentProps<ProductData> {
     product:ProductData;
@@ -22,6 +23,12 @@ const Product = (props:ComponentProps<ProductData>)=>{
     const [editingPrice,setEditingPrice]=useState<string>();
     const {product,changeProductPrice} = props;
     const [isEditing,setIsEditing]=useState(false);
+    const theme = useContext(ThemeContext);
+
+    const themStyle = {
+        backgroundColor: theme === "dark" ? "#000" : "#ccc",
+        color: theme === "dark" ? "#fff" : "#000"
+    };
 
     const clickProductImg = function(link){
         navigate(link);
@@ -38,7 +45,6 @@ const Product = (props:ComponentProps<ProductData>)=>{
 
 
     const inputTextChange=function (value:string) {
-        console.log("aaaaaaaaa")
         setEditingPrice(value);
     }
 
@@ -61,7 +67,7 @@ const Product = (props:ComponentProps<ProductData>)=>{
                    </PriceInput>
                        :<font color="error">¥ {product.price}</font>
            }
-           <button  onClick={()=>changePrice()}>change Price</button>
+           <button  style={themStyle} onClick={()=>changePrice()}>change Price</button>
            </div>
        </Card.Body>
        </Card>

@@ -1,6 +1,15 @@
 import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
+import {useContext} from "react";
+import {ThemeContext} from "../App.tsx";
 
 export const Navba= function(){
+
+    const theme = useContext(ThemeContext);
+
+    const themStyle = {
+        backgroundColor: theme === "dark" ? "#000" : "#ccc",
+        color: theme === "dark" ? "#fff" : "#000"
+    };
 
     return (
         <Navbar bg="light" expand="lg">
@@ -18,6 +27,7 @@ export const Navba= function(){
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>
+                        <p style={themStyle}>this is an example</p>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
