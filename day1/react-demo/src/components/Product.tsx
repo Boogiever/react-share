@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import {Button, TextField} from "@mui/material";
 import {PriceInput} from './style.ts';
 
-interface ComponentProps<T> {
+interface ComponentProps<ProductData> {
     product:ProductData;
     changeProductPrice:(id:string,price:string)=>unknown;
 }

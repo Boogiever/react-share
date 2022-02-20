@@ -11,7 +11,7 @@ export const ProductList=()=>{
     }, [])
 
     const changeProductPrice=(id:string,price:string)=>{
-        const productIndex=products.findIndex((product=>product.id==id));
+        const productIndex=products.findIndex((product=>product.id===id));
         products[productIndex].price=price;
         setProducts(products);
     }
