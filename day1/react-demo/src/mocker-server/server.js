@@ -8,14 +8,14 @@ export default function makeServer() {
     },
 
     routes() {
-      this.get("/products", (schema, request) => {
-        return schema.products.all()
-      })
+      this.get("/products")
 
-      this.get("/products/:id", (schema, request) => {
+      this.get("/products/:id")
+
+      this.delete("/products/:id", (schema, request) => {
         let id = request.params.id
 
-        return schema.products.find(id)
+        return schema.products.find(id).destroy()
       })
     },
 
