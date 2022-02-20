@@ -1,25 +1,18 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Container} from "react-bootstrap";
-import { Navba } from "./components/Navba.tsx";
 import {ProductList} from "./pages/ProductList.tsx";
-
-export const ThemeContext = React.createContext("light");
+import {ThemeProvider} from "./components/ThemeProvider.tsx";
+import {Navba} from "./components/Navba.tsx";
 
 const App = () => {
-    const [theme,setTheme]=useState("dark");
-
-    const toggleTheme=()=>{
-        setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
-    };
 
   return (
-      <ThemeContext.Provider value={{theme,toggleTheme}}>
+      <ThemeProvider>
           <Container>
               <Navba/>
               <ProductList/>
           </Container>
-      </ThemeContext.Provider>
-
+      </ThemeProvider>
   );
 }
 

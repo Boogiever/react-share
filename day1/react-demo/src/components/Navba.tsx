@@ -1,8 +1,8 @@
 import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import {useContext} from "react";
-import {ThemeContext} from "../App.tsx";
+import ThemeContext from "./ThemeProvider.tsx";
 
-export const Navba= function(){
+export const Navba = function(){
 
     const {theme} = useContext(ThemeContext);
 
@@ -10,6 +10,8 @@ export const Navba= function(){
         backgroundColor: theme === "dark" ? "#000" : "#ccc",
         color: theme === "dark" ? "#fff" : "#000"
     };
+
+    console.log("render navba");
 
     return (
         <Navbar bg="light" expand="lg">

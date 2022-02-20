@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
 import {Button, TextField} from "@mui/material";
 import {PriceInput} from './style.ts';
-import {ThemeContext} from "../App.tsx";
+import ThemeContext from "./ThemeProvider.tsx";
 
 interface ComponentProps<ProductData> {
     product:ProductData;
