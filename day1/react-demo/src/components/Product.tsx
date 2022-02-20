@@ -23,7 +23,7 @@ const Product = (props:ComponentProps<ProductData>)=>{
     const [editingPrice,setEditingPrice]=useState<string>();
     const {product,changeProductPrice} = props;
     const [isEditing,setIsEditing]=useState(false);
-    const theme = useContext(ThemeContext);
+    const {theme,toggleTheme} = useContext(ThemeContext);
 
     const themStyle = {
         backgroundColor: theme === "dark" ? "#000" : "#ccc",
@@ -36,6 +36,7 @@ const Product = (props:ComponentProps<ProductData>)=>{
 
     const changePrice=function () {
         setIsEditing(true);
+        toggleTheme();
     }
 
     const savePrice=(id:string,price:string)=>{

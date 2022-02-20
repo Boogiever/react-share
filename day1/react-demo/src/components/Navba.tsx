@@ -4,9 +4,9 @@ import {ThemeContext} from "../App.tsx";
 
 export const Navba= function(){
 
-    const theme = useContext(ThemeContext);
+    const {theme} = useContext(ThemeContext);
 
-    const themStyle = {
+    const themeStyle = {
         backgroundColor: theme === "dark" ? "#000" : "#ccc",
         color: theme === "dark" ? "#fff" : "#000"
     };
@@ -27,7 +27,7 @@ export const Navba= function(){
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
                         </NavDropdown>
-                        <p style={themStyle}>this is an example</p>
+                        <p style={themeStyle}>this is an example</p>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
